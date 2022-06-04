@@ -1,0 +1,44 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #4B6CC1;
+}
+
+nav li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#aboutme > img{
+  border-radius: 50%;
+  width: 15%;
+  height: 15%;
+}
+
+#aboutme p{
+  font-size: larger;
+}
+
+#links .icon{
+  width: 3%;
+  height: 10%;
+  color: #4B6CC1;
+} 
+
+
+
