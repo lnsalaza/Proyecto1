@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@800&display=swap');
 
-* {
-  font-family: 'Montserrat', sans-serif;
+:root {
+  --light-blue: #4B6CC1;
+  --dark-olive-green: #678e7a7f;
 }
 
+
+
 * , *:before, *:after {
+  font-family: 'Montserrat', sans-serif;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -25,13 +30,18 @@ body {
   margin: 0;
 }
 
+h1 {
+  color: #4B6CC1;
 
+}
+
+/*------- NAVEGACION --------*/
 nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #4B6CC1;
+  background-color: var(--light-blue);
 }
 
 nav li {
@@ -46,6 +56,7 @@ nav a {
   text-decoration: none;
 }
 
+/*------- ABOUT ME --------*/
 #aboutme > img{
   border-radius: 50%;
   width: 15%;
@@ -59,15 +70,57 @@ nav a {
 #links .icon{
   width: 3%;
   height: 10%;
-  color: #4B6CC1;
+  color: var(--light-blue);
 } 
 
-div.container {
-  border: 20px;
-  border-color: #4B6CC1;
+/*------- LANGUAGES --------*/
+#language ul {
+  align-items: center;
+  color: white;
+  background-color: var(--dark-olive-green);
+  background-color: 80%;
+  border-radius: 0.8rem;
+  margin: 3rem 15%;
+  padding: 3%;
 }
 
 
 
+/*------- PROJECTS --------*/
+#projects table {
+  align-content: center;
+  color: white;
+  background-color: var(--dark-olive-green);
+  background-color: 80%;
+  border-radius: 0.8rem;
+  margin: 3rem 15%;
+  padding: 3%;
+}
+
+#projects img {
+  width: 30%;
+  height: auto;
+}
+
+/*------- CONTACT ME --------*/
+#contactMe form {
+  align-items: center;
+  color: white;
+  background-color: var(--dark-olive-green);
+  background-color: 80%;
+  border-radius: 0.8rem;
+  margin: 3rem 15%;
+  padding: 3%;
+}
+
+#contactMe label {
+  padding: 10rem 0rem;
+}
+
+/*------- FOOTER --------*/
+footer {
+  background-color: var(--light-blue);
+  padding: 14px;
+}
 
 
