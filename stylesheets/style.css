@@ -1,6 +1,28 @@
-html, body {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+* , *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+img, video {
+  width: 100%;
+  height: auto;
+}
+
+html{
   height: 100%;
   width: 100%;
+}
+
+body {
+  /*display: flex;*/
+  margin: 0;
 }
 
 
@@ -16,7 +38,7 @@ nav li {
   float: left;
 }
 
-li a {
+nav a {
   display: block;
   color: white;
   text-align: center;
@@ -39,6 +61,13 @@ li a {
   height: 10%;
   color: #4B6CC1;
 } 
+
+div.container {
+  border: 20px;
+  border-color: #4B6CC1;
+}
+
+
 
 
 

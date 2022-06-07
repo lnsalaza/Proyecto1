@@ -3,34 +3,71 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>Portafolio Web</title>
-  <link href="stylesheets/style.css" rel="stylesheet" type="text/css"  />
+  <link href="stylesheets/style.css" rel="stylesheet" type="text/css"/>
 </head>
+
 
 
 <body>
 	<nav>
 		<ul>
-			<li><a class="active" href="#aboutme">Home</a></li>
+			<li><a class="active" href="#aboutme">HOME</a></li>
 			<li><a href="#projects">PROYECTOS</a></li>
-			<li><a href="#contact">CONTACTAME</a></li>
+			<li><a href="#contactMe">CONTACTAME</a></li>
 		</ul>
 	</nav>
 
-	<section id="aboutme">
+	<div id="aboutme">
 		<img alt="Foto de perfil" src="resources/Perfil.png">
-		<p>Hola mundo! Soy <span>Loberlly Salazar.</span><br> Actual estudiante de Ingeniería en Computación de la <span>Superior Politécnica del Litoral</span></p>
+		<p>Hola mundo! Soy <b>Loberlly Salazar.</b><br> Actual estudiante de Ingeniería en Computación de la <b>Superior Politécnica del Litoral</b></p>
 		<div id="links">
 			<img class="icon" alt="github" src="resources/github.png">
 			<img class="icon" alt="linkedin" src="resources/linkedin.png">
 			<img class="icon" alt="instagram" src="resources/instagram.png">
 			<img class="icon" alt="twitter" src="resources/twitter.png">
 		</div>	
-	</section>
+	</div>
 
-	<p>parrafito de prueba</p>
+	<div id="language" class="container">
+		<h1>Puedes dirigirte a mi en estos idiomas:</h1>
 
+		<ul>
+			<li>Español, Lengua nativa.</li>
+			<li>Ingles, B2 MET Certificate.</li>
+		</ul>
+	</div>
+
+	<div id="projects" class="container">
+		<h1>Proyectos</h1>
+
+		<table>
+			<tr>
+				<td><img src="resources/tictactoe.png" alt="Tres en raya"></td>
+				<td><img src="resources/ruleta.png" alt="Ruletas numericas"></td>
+			</tr>
+
+			<tr>
+				<th>TicTacToe</th>
+				<th>Ruletas Numéricas</th>
+			</tr>
+		</table>
+	</div>
+
+	<div id="contactMe" class="container">
+		<h1>Contactame</h1>
+		<form>
+			<label for="name">Nombre<span>*</span></label><br>
+			<input type="text" id="name" name="name"><br>
+			<label for="email">E-mail<span>*</span></label><br>
+			<input type="text" id="email" name="email"><br>
+			<label for="issue">Asunto<span>*</span></label><br>
+			<input type="text" id="issue" name="issue"><br>
+			<label for="msg">Mensaje<span>*</span></label><br>	
+			<textarea name="msg" id="msg" cols="30" rows="10"></textarea><br>
+		</form>
+	</div>
 
   <script src="script.js"></script>
 </body>
