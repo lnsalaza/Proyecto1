@@ -21,7 +21,7 @@
 
 	
 
-	<div id="aboutme">
+	<div id="aboutme" >
 
 			<img alt="Foto de perfil" src="resources/Perfil.png">
 
@@ -31,14 +31,27 @@
 				<img class="icon" alt="instagram" src="resources/instagram.png">
 				<img class="icon" alt="twitter" src="resources/twitter.png">
 			</div>
-
+			
 			<p>
 				Hola mundo! Soy <b>Loberlly Salazar.</b><br>
 				Actual estudiante de Ingeniería en Computación de la <b>Superior Politécnica del Litoral</b>
-				<a href="https://goo.gl/maps/SHPnAXHv537wFVYJA"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+				<button class="btn-abrir-popup" id="btn-abrir-popup"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
 					<path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
-				</svg></a>
+				</svg></button>
 			</p>
+
+			<div class="overlay" id="overlay">
+				<div class="popup" id="popup">
+					<a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+							<path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+						</svg>
+					</a>
+					<h3>Ubicación:</h3>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63792.24264597484!2d-80.03460724179688!3d-2.1478802000000035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d72f925e5bfdb%3A0x327cdb9f7f4ba3b2!2sEscuela%20Superior%20Polit%C3%A9cnica%20del%20Litoral%20(ESPOL)!5e0!3m2!1ses-419!2sec!4v1655143726248!5m2!1ses-419!2sec" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+			</div>
+			
 	</div>
 
 	
