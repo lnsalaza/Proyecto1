@@ -1,0 +1,39 @@
+@media (max-width: 895px) { 
+    .aboutme {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        column-gap: 0.2rem;
+        margin: 2rem 0;
+    } 
+
+    .aboutme p {
+        font-size: 1.5rem;
+        text-align: center;
+        max-width: 70%;
+
+    }
+
+    h1 {
+        font-size: x-large;
+    }
+
+    .contactme {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    #projects svg {
+        fill: var(--light-blue);
+        width: 6rem;
+        height: auto;
+    }
+
+    .aboutme #perfil {
+        border-radius: 50%;
+        width: 10rem;
+        height: auto;
+    }
+}

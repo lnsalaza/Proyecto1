@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@800&display=swap');
 
 :root {
   --light-blue: #4B6CC1;
   --dark-olive-green: #678e7a7f;
-  --container-min-width: 75%;
+  --container-min-width: 60%;
 }
 
 * , *:before, *:after {
@@ -32,6 +33,19 @@ body {
 
 h1 {
   color: #4B6CC1;
+  font-weight:900;
+  max-width: var(--container-min-width);
+}
+
+#language, #projects, #contactMe {
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 0.2rem;
+  column-gap: 0.2rem;
+  margin: 2rem 0;
 }
 
 .divider {
@@ -44,6 +58,8 @@ h1 {
 
 /*------- NAVEGACION --------*/
 
+
+
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -51,6 +67,7 @@ nav ul {
   overflow: hidden;
   background-color: var(--light-blue);
   min-width: 100%;
+  font-weight: 600;
 }
 
 nav li {
@@ -63,51 +80,30 @@ nav a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+
 }
 
 /*------- ABOUT ME --------*/
-#aboutme {
-  /*background-color:#678e7a7f;*/
-  display: flex; 
-  justify-content: space-evenly;
+.aboutme {
+  display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  row-gap: 0.2rem;
-  column-gap: 0.2rem;
+  justify-content: space-evenly;
   margin: 2rem 0;
 }
 
-/*#aboutme div:nth-child(1){
-  order: -1;
-}*/
-
-#aboutme > img {
+.aboutme #perfil {
   border-radius: 50%;
-  width: 15%;
-  height: 15%;
+  width: 15rem;
+  height: auto;
 }
 
-#aboutme p{
-  font-size: larger;
+.aboutme p {
+  font-size: 2rem;
+  text-justify: distribute-all-lines;
+  max-width: 50%;
 }
-
-#links .icon{
-  width: 3%;
-  height: 10%;
-  color: var(--light-blue);
-} 
 
 /*------- LANGUAGES --------*/
-#language, #projects, #contactMe {
-  display: flex;
-  flex-direction: column; 
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  row-gap: 0.2rem;
-  column-gap: 0.2rem;
-  margin: 2rem 0;
-}
 
 #language ul {
   min-width: var(--container-min-width);
@@ -117,6 +113,19 @@ nav a {
   background-color: 80%;
   border-radius: 0.8rem;
   padding: 3%;
+  list-style-type: none;
+  font-size: larger;
+  text-align: center;
+}
+
+#language li{
+  font-weight: 500;
+  padding: 0.5rem;
+}
+
+#language svg {
+  fill: red;
+  fill-opacity: 80%;
 }
 
 
@@ -145,32 +154,115 @@ nav a {
 
 #projects svg {
   fill: var(--light-blue);
-  width: 15%;
+  width: 8rem;
   height: auto;
 }
 
 /*------- CONTACT ME --------*/
 #contactMe form {
   min-width: var(--container-min-width);
-  align-items: center;
-  color: white;
+  color: #ffffff;
   background-color: var(--dark-olive-green);
   background-color: 80%;
   border-radius: 0.8rem;
   padding: 5%;
 }
 
-#contactMe label {
-  padding: 10rem 0rem;
+#contactMe label { padding: 0.5rem 0rem;}
+
+#contactMe span { color: var(--light-blue) ;}
+
+#contactMe input, textarea {
+  background-color: #f0f4f2;
+  color: var(--light-blue);
+  border: 0px;
+  border-radius: 0.2rem;
+  margin: .2rem 0rem;
+  padding: .7rem;
+  min-width: 100%;
 }
+
+#contactMe button {
+  background-color: var(--light-blue);
+  border: 0px;
+  border-radius: 2rem;
+  color: white;
+  padding: .7rem 1.5rem;
+  margin-top: 0.6rem;
+  font-size:medium;
+  font-weight: 900;
+}
+
+#contactMe button:hover {
+  cursor: pointer;
+}
+
+.contactme {
+  display: grid;
+  grid-template-columns:0.3fr 1fr 1fr 0.3fr 1fr 1fr 0.3fr; 
+  grid-template-rows: 0.4fr 0.4fr 0.4fr 0.4fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    " . name name . email email . "
+    " . issue issue issue issue issue . "
+    " . message message message message message . "
+    " . . . . send send . "; 
+}
+
+.name { grid-area: name;}
+.email { grid-area: email; }
+.issue { grid-area: issue; }
+.message { grid-area: message; }
+.send { grid-area: send; justify-self: end;}
+
 
 /*------- FOOTER --------*/
 footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: var(--light-blue);
   padding: 14px;
 }
 
+footer .icon{
+  width: 2rem;
+  height: auto;
+  color: white;
+}
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown svg {
+  fill: white;
+  width: 2rem;
+  height: auto;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  bottom: 39px;
+  background-color:var(--light-blue);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  border-radius: 0.8rem;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover {
+  cursor: pointer;
+}
+
+/*------- POPUP --------*/
 .overlay{
   background: rgba(0, 0, 0, .3);
   position: fixed;
@@ -182,7 +274,20 @@ footer {
   align-items: center;
   justify-content: center;
   visibility: hidden;
+}
 
+.textButton {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  align-items: center;
+  margin: 0% 5%;
+}
+
+.overlay iframe {
+  width: 90%;
+  height: 75%;
+  border-radius: 0.6rem;
 }
 
 .btn-abrir-popup{
@@ -203,24 +308,17 @@ footer {
 .popup{
   background:#f8f8f8 ;
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, .3);
-  border-radius: 3px;
-  padding: 20px;
+  border-radius: 0.6rem;
+  padding: 1rem;
   text-align: center;
-  width: 30rem;
-
-}
-
-.popup a:nth-child(1){
-  align-content: flex-end;
+  width: 60%;
+  height: 60%;
 }
 
 .popup .btn-cerrar-popup{
-  font-size: 16px;
-  line-height: 16px;
-  display: block;
-  text-align: right;
+  font-size: 20px;
+  line-height: 20px;
   color: var(--light-blue);
-  transition: .3s ease all;
 }
 
 .popup .btn-cerrar-popup:hover{
@@ -230,5 +328,25 @@ footer {
 .popup h3 {
   color: var(--light-blue);
   font-size: x-large;
-
 }
+
+/*------- ARROW UP --------*/
+
+#up svg {
+  fill: white;
+  width: 2.5rem;
+  height: auto;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--light-blue);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+#up {
+  position:fixed;
+  right: 1rem;
+  bottom: 4rem;
+}
+
+
+
