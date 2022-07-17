@@ -102,6 +102,7 @@ let cargarBotonSerie = ()  =>{
         let newOption = document.createElement('option');
         newOption.value = element;
         newOption.textContent = element;
+        newOption.setAttribute('class','m-0')
         slctSerie.appendChild(newOption);
     })
 }
@@ -121,6 +122,7 @@ let cargarBotonGame = ()  =>{
         let newOption = document.createElement('option');
         newOption.value = element;
         newOption.textContent = element;
+        newOption.setAttribute('class','m-0')
         slctGame.appendChild(newOption);
     })
 }
@@ -140,6 +142,7 @@ let cargarBotonPersonaje = ()  =>{
         let newOption = document.createElement('option');
         newOption.value = element;
         newOption.textContent = element;
+        newOption.setAttribute('class','m-0')
         slctPersonaje.appendChild(newOption);
     })
 }
@@ -159,6 +162,7 @@ let cargarBotonTipo = ()  =>{
         let newOption = document.createElement('option');
         newOption.value = element;
         newOption.textContent = element;
+        newOption.setAttribute('class','m-0')
         slctTipo.appendChild(newOption);
     })
 }
@@ -179,6 +183,7 @@ let cargarFiltros = () => {
 
 let cargandoTabla =  (arreglo) =>{
     let contenedor = document.getElementById('amiibosInfo');
+    contenedor.innerHTML = ``
     contenedor.innerHTML = 
     `<div class="spinner-border spinner-border-lg text-primary d-flex flex-xxl-fill justify-content-center " role="status" style="margin:50% 250%">
         <span class="visually-hidden">Loading...</span>
@@ -197,8 +202,8 @@ let cargarTablaInfo =  (arreglo) =>{
                                 <td>
                                 <i class="fab fa-bootstrap fa-lg text-primary me-3"></i> <strong>${arreglo[i].amiiboSeries}</strong>
                                 </td>
-                                <td>${arreglo[i].name}</td>
-                                <td>
+                                <td text-wrap>${arreglo[i].name}</td>
+                                <td m-0>
                                     <ul class="list-unstyled m-0 avatar-group d-flex flex-column justify-content-center">
                                         <li>${arreglo[i].character}<li>
                                         <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="${arreglo[i].name}">
@@ -206,7 +211,7 @@ let cargarTablaInfo =  (arreglo) =>{
                                         </li>
                                     </ul>
                                 </td>
-                                <td>${arreglo[i].gameSeries}</td>
+                                <td text-wrap>${arreglo[i].gameSeries}</td>
                                 <td><span class="badge bg-label-primary me-1">${arreglo[i].type}</span></td>
                                 <td>
                                     <ul class="list-unstyled">
@@ -225,7 +230,7 @@ let cargarTablaInfo =  (arreglo) =>{
                                 <td>
                                     <i class="fab fa-bootstrap fa-lg text-primary me-3"></i> <strong>${arreglo[i].amiiboSeries}</strong>
                                 </td>
-                                <td>${arreglo[i].name}</td>
+                                <td text-wrap>${arreglo[i].name}</td>
                                 <td>
                                     <ul class="list-unstyled m-0 avatar-group d-flex flex-column justify-content-center">
                                         <li>${arreglo[i].character}<li>
@@ -234,19 +239,26 @@ let cargarTablaInfo =  (arreglo) =>{
                                         </li>
                                     </ul>
                                 </td>
-                                <td>${arreglo[i].gameSeries}</td>
+                                <td text-wrap>${arreglo[i].gameSeries}</td>
                                 <td><span class="badge bg-label-success me-1">${arreglo[i].type}</span></td>
-                                <td>${arreglo[i].release}</td>
+                                <td>
+                                    <ul class="list-unstyled">
+                                        <li>Australia: ${arreglo[i].release.au == null ? "No lanzado": arreglo[i].release.au}</li>
+                                        <li>Europa: ${arreglo[i].release.eu == null ? "No lanzado": arreglo[i].release.eu}</li>
+                                        <li>Japón: ${arreglo[i].release.jp == null ? "No lanzado": arreglo[i].release.jp}</li>
+                                        <li>America: ${arreglo[i].release.na == null ? "No lanzado": arreglo[i].release.na}</li>
+                                    </ul>
+                                </td>
                         </tr>`  
             contenedor.innerHTML += plantilla2;
         } 
         
         if (arreglo[i].type == 'Yarn') {
-            let plantilla3 = `<tr class="table-warning">
+            let plantilla3 = `<tr class="table-warning ">
                                 <td>
                                     <i class="fab fa-bootstrap fa-lg text-primary me-3"></i> <strong>${arreglo[i].amiiboSeries}</strong>
                                 </td>
-                                <td>${arreglo[i].name}</td>
+                                <td text-wrap>${arreglo[i].name}</td>
                                 <td>
                                     <ul class="list-unstyled m-0 avatar-group d-flex flex-column justify-content-center">
                                         <li>${arreglo[i].character}<li>
@@ -255,9 +267,16 @@ let cargarTablaInfo =  (arreglo) =>{
                                         </li>
                                     </ul>
                                     </td>
-                                    <td>${arreglo[i].gameSeries}</td>
+                                    <td text-wrap>${arreglo[i].gameSeries}</td>
                                     <td><span class="badge bg-label-warning me-1">${arreglo[i].type}</span></td>
-                                    <td>${arreglo[i].release}</td>
+                                    <td>
+                                        <ul class="list-unstyled">
+                                            <li>Australia: ${arreglo[i].release.au == null ? "No lanzado": arreglo[i].release.au}</li>
+                                            <li>Europa: ${arreglo[i].release.eu == null ? "No lanzado": arreglo[i].release.eu}</li>
+                                            <li>Japón: ${arreglo[i].release.jp == null ? "No lanzado": arreglo[i].release.jp}</li>
+                                            <li>America: ${arreglo[i].release.na == null ? "No lanzado": arreglo[i].release.na}</li>
+                                        </ul>
+                                    </td>
                             </tr>`
                 contenedor.innerHTML += plantilla3;
         } 
@@ -267,7 +286,7 @@ let cargarTablaInfo =  (arreglo) =>{
                                 <td>
                                 <i class="fab fa-bootstrap fa-lg text-primary me-3"></i> <strong>${arreglo[i].amiiboSeries}</strong>
                                 </td>
-                                <td>${arreglo[i].name}</td>
+                                <td text-wrap>${arreglo[i].name}</td>
                                 <td>
                                     <ul class="list-unstyled m-0 avatar-group d-flex flex-column justify-content-center">
                                         <li>${arreglo[i].character}<li>
@@ -276,9 +295,16 @@ let cargarTablaInfo =  (arreglo) =>{
                                         </li>
                                     </ul>
                                 </td>
-                                <td>${arreglo[i].gameSeries}</td>
+                                <td text-wrap>${arreglo[i].gameSeries}</td>
                                 <td><span class="badge bg-label-info me-1">${arreglo[i].type}</span></td>
-                                <td>${arreglo[i].release}</td>
+                                <td>
+                                    <ul class="list-unstyled">
+                                        <li>Australia: ${arreglo[i].release.au == null ? "No lanzado": arreglo[i].release.au}</li>
+                                        <li>Europa: ${arreglo[i].release.eu == null ? "No lanzado": arreglo[i].release.eu}</li>
+                                        <li>Japón: ${arreglo[i].release.jp == null ? "No lanzado": arreglo[i].release.jp}</li>
+                                        <li>America: ${arreglo[i].release.na == null ? "No lanzado": arreglo[i].release.na}</li>
+                                    </ul>
+                                </td>
                             </tr>`
             contenedor.innerHTML += plantilla4;
         }

@@ -95,16 +95,26 @@
 
         <!-- Layout container -->
         <div class="layout-page">
+          <nav
+            class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+            id="layout-navbar"
+          >
+            <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
+              <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+                <i class="bx bx-menu bx-sm"></i>
+              </a>
+            </div>
+            <div class="navbar-nav" id="navbar-collapse">
+              <h4 class="fw-bold nav-item py-3 mb-4"><span class="text-muted fw-light">Información /</span id="filterOption"> Amiibos</h4>
+            </div>
+          </nav>
+
           <!-- Content wrapper -->
           <div class="content-wrapper">
             <!-- Content -->
-
             <div class="container-xxl flex-grow-1 container-p-y">
-              <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Información /</span id="filterOption"> Amiibos</h4>
-
-              <hr class="my-5" />
               <!-- Contextual Classes -->
-              <div class="card">
+              <div class="card text-wrap">
                 <h5 class="card-header">Información de Amiibos</h5>
                 <div class="table-responsive d-flex text-nowrap align-items-center">
                   <table class="table">
@@ -112,36 +122,36 @@
                       <tr>
                         <th>
                           <div class="btn-group row gx-3 gy-2 align-items-center">
-                            <label class="form-label" for="selectSerieOpt">Serie</label>
+                              <label class="form-label" for="selectSerieOpt">Colección</label>
                               <select id="selectSerieOpt" class="form-select color-dropdown"></select>
                           </div>
                         </th>
                         <th>
                           <div class="btn-group row gx-3 gy-2 align-items-center">
-                            <label class="form-label" for="selectSerieOpt">Nombre</label>
+                              <label class="form-label" for="selectSerieOpt">Nombre</label>
                               <select id="selectSerieOpt" class="form-select color-dropdown" disabled></select>
                           </div>
                         </th>
                         <th>
                           <div class="btn-group row gx-3 gy-2 align-items-center">
-                          <label class="form-label" for="selectPersonajeOpt">Personaje</label>
+                            <label class="form-label" for="selectPersonajeOpt">Personaje</label>
                             <select id="selectPersonajeOpt" class="form-select color-dropdown"></select>
                           </div>
                         </th>
                         <th>
                           <div class="btn-group row gx-3 gy-2 align-items-center">
-                          <label class="form-label" for="selectJuegoOpt">Juego</label>
+                            <label class="form-label" for="selectJuegoOpt">Juego</label>
                             <select id="selectJuegoOpt" class="form-select color-dropdown"></select>
                           </div>
                         </th>
                         <th>
                           <div class="btn-group row gx-3 gy-2 align-items-center">
-                          <label class="form-label" for="selectTipoOpt">Tipo</label>
+                            <label class="form-label" for="selectTipoOpt">Tipo</label>
                             <select id="selectTipoOpt" class="form-select color-dropdown"></select>
                           </div>
                         </th>
                         <th>
-                          <div class="btn-group row gx-3 gy-2 align-items-center">
+                          <div class="btn-group row gx-3 gy-2  align-items-center">
                             <label class="form-label" for="selectSerieOpt">Lanzamientos</label>
                               <select id="selectSerieOpt" class="form-select color-dropdown" disabled></select>
                           </div>
@@ -159,6 +169,9 @@
 
             <!-- Footer -->
             <footer class="content-footer footer bg-footer-theme">
+              <div class="container-xxl d-flex flex-wrap justify-content-center py-2 flex-md-row flex-column">
+                <p>*El contenido puede llegar a tardar debido a su gran cantidad, ¡La paciencia es una virtud! 😊*</p>
+              </div>
               <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
                 <div class="mb-2 mb-md-0">
                   ©
@@ -166,7 +179,11 @@
                     document.write(new Date().getFullYear());
                   </script>
                   , made with ❤️ by
-                  <a href="https://themeselection.com" target="_blank" class="footer-link fw-bolder">ThemeSelection</a>
+                  <span>
+                    <a href="https://themeselection.com" target="_blank" class="footer-link fw-bolder">ThemeSelection</a>
+                    &
+                    <a href="https://github.com/lnsalaza" target="_blank" class="footer-link fw-bolder">Loberlly Salazar</a>
+                  </span> 
                 </div>
                 <div>
                   <a href="https://themeselection.com/license/" class="footer-link me-4" target="_blank">License</a>
