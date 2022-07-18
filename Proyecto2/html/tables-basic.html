@@ -104,7 +104,7 @@
                 <i class="bx bx-menu bx-sm"></i>
               </a>
             </div>
-            <div class="navbar-nav" id="navbar-collapse">
+            <div class="nav-item">
               <h4 class="fw-bold nav-item py-3 mb-4"><span class="text-muted fw-light">Información /</span id="filterOption"> Amiibos</h4>
             </div>
           </nav>
@@ -113,56 +113,59 @@
           <div class="content-wrapper">
             <!-- Content -->
             <div class="container-xxl flex-grow-1 container-p-y">
-              <!-- Contextual Classes -->
+              <hr/>
+              <!-- Tabla de información de amiibos -->
               <div class="card text-wrap">
                 <h5 class="card-header">Información de Amiibos</h5>
-                <div class="table-responsive d-flex text-nowrap align-items-center">
-                  <table class="table">
-                    <thead>
-                      <tr>
-                        <th>
-                          <div class="btn-group row gx-3 gy-2 align-items-center">
-                              <label class="form-label" for="selectSerieOpt">Colección</label>
-                              <select id="selectSerieOpt" class="form-select color-dropdown"></select>
-                          </div>
-                        </th>
-                        <th>
-                          <div class="btn-group row gx-3 gy-2 align-items-center">
-                              <label class="form-label" for="selectSerieOpt">Nombre</label>
-                              <select id="selectSerieOpt" class="form-select color-dropdown" disabled></select>
-                          </div>
-                        </th>
-                        <th>
-                          <div class="btn-group row gx-3 gy-2 align-items-center">
-                            <label class="form-label" for="selectPersonajeOpt">Personaje</label>
-                            <select id="selectPersonajeOpt" class="form-select color-dropdown"></select>
-                          </div>
-                        </th>
-                        <th>
-                          <div class="btn-group row gx-3 gy-2 align-items-center">
-                            <label class="form-label" for="selectJuegoOpt">Juego</label>
-                            <select id="selectJuegoOpt" class="form-select color-dropdown"></select>
-                          </div>
-                        </th>
-                        <th>
-                          <div class="btn-group row gx-3 gy-2 align-items-center">
-                            <label class="form-label" for="selectTipoOpt">Tipo</label>
-                            <select id="selectTipoOpt" class="form-select color-dropdown"></select>
-                          </div>
-                        </th>
-                        <th>
-                          <div class="btn-group row gx-3 gy-2  align-items-center">
-                            <label class="form-label" for="selectSerieOpt">Lanzamientos</label>
-                              <select id="selectSerieOpt" class="form-select color-dropdown" disabled></select>
-                          </div>
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody class="table-border-bottom-0" id="amiibosInfo"></tbody>
-                  </table>
-                </div>
+                <div class="card-body">
+                  <div class="table-responsive text-wrap">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>
+                            <div class="btn-group row gx-3 gy-2 align-items-center">
+                                <label class="form-label" for="selectSerieOpt">Colección</label>
+                                <select id="selectSerieOpt" class="form-select color-dropdown"></select>
+                            </div>
+                          </th>
+                          <th>
+                            <div class="btn-group row gx-3 gy-2 align-items-center">
+                                <label class="form-label" for="selectSerieOpt">Nombre</label>
+                                <select id="selectSerieOpt" class="form-select color-dropdown" disabled></select>
+                            </div>
+                          </th>
+                          <th>
+                            <div class="btn-group row gx-3 gy-2 align-items-center">
+                              <label class="form-label" for="selectPersonajeOpt">Personaje</label>
+                              <select id="selectPersonajeOpt" class="form-select color-dropdown"></select>
+                            </div>
+                          </th>
+                          <th>
+                            <div class="btn-group row gx-3 gy-2 align-items-center">
+                              <label class="form-label" for="selectJuegoOpt">Juego</label>
+                              <select id="selectJuegoOpt" class="form-select color-dropdown"></select>
+                            </div>
+                          </th>
+                          <th>
+                            <div class="btn-group row gx-3 gy-2 align-items-center">
+                              <label class="form-label" for="selectTipoOpt">Tipo</label>
+                              <select id="selectTipoOpt" class="form-select color-dropdown"></select>
+                            </div>
+                          </th>
+                          <th>
+                            <div class="btn-group row gx-3 gy-2  align-items-center">
+                              <label class="form-label" for="selectSerieOpt">Lanzamientos</label>
+                                <select id="selectSerieOpt" class="form-select color-dropdown" disabled></select>
+                            </div>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody class="table-border-bottom-0" id="amiibosInfo"></tbody>
+                    </table>
+                  </div>
               </div>
-              <!--/ Contextual Classes -->
+              </div>
+              <!--/ Tabla de información de amiibos -->
               <hr class="my-5" />
             </div>
             <!-- / Content -->
